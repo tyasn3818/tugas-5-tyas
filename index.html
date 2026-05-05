@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDX AKA Tour 2026 | Janji Ora Nangis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palet warna gradasi berani sesuai panduan visual */
+            --primary-grad: linear-gradient(135deg, #ff8c00, #ff0080); 
+            --dark-bg: #0d0d0d;
+            --accent-orange: #ffca28;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--dark-bg); color: white; overflow-x: hidden; }
+        
+        h1, h2 { font-family: 'Bangers', cursive; letter-spacing: 2px; }
+
+        /* --- 1. HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 5rem; color: var(--accent-orange); text-shadow: 4px 4px #ff0080; margin-bottom: 10px; }
+        .hero p { font-size: 1.5rem; font-weight: 700; margin-bottom: 30px; letter-spacing: 2px; }
+        
+        .cta-btn {
+            padding: 18px 45px;
+            background: var(--primary-grad);
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .cta-btn:hover { transform: scale(1.05) rotate(-2deg); box-shadow: 0 8px 25px rgba(255, 0, 128, 0.6); }
+
+        /* --- 2. ABOUT THE BRAND --- */
+.about {
+  padding: 100px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: var(--primary-grad);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text; /* fallback */
+  color: transparent;
+}
+
+.about-text p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+        /* --- 3. PRODUCT/FEATURE GALLERY --- */
+        .gallery { padding: 100px 10%; background: #161616; text-align: center; }
+        .gallery h2 { font-size: 3rem; margin-bottom: 50px; }
+        .ticket-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        
+        .ticket-card {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+            position: relative;
+        }
+        .ticket-card:hover { border-color: #ff0080; transform: translateY(-10px); }
+        .ticket-card h3 { font-size: 2rem; margin-bottom: 15px; }
+        .price { font-size: 2.2rem; font-weight: 900; color: var(--accent-orange); margin: 20px 0; display: block; }
+
+        /* --- 4. TESTIMONIALS --- */
+        .testimonials { padding: 100px 10%; text-align: center; background: radial-gradient(circle at center, #1a0a2e, #0d0d0d); }
+        .testi-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px; }
+        .testi-box { 
+            max-width: 350px; 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 30px; 
+            border-radius: 20px; 
+            border-left: 5px solid #ff0080;
+            text-align: left;
+        }
+        .testi-box p { font-style: italic; opacity: 0.8; margin-bottom: 15px; }
+        .testi-box span { font-weight: bold; color: var(--accent-orange); }
+
+        /* --- 5. FOOTER --- */
+        footer { 
+            padding: 80px 10%; 
+            background: #000; 
+            border-top: 2px solid #ff8c00; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 40px; 
+        }
+        .footer-col h4 { margin-bottom: 20px; color: var(--accent-orange); font-size: 1.2rem; }
+        .footer-col p, .footer-col a { font-size: 0.9rem; opacity: 0.7; color: white; text-decoration: none; display: block; margin-bottom: 10px; }
+        .footer-col a:hover { opacity: 1; color: #ff0080; }
+
+        @media (max-width: 768px) {
+            .about { grid-template-columns: 1fr; text-align: center; }
+            .hero h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <h1>NDX AKA 2026</h1> <!-- Nama Brand -->
+        <p>"JANJI ORA NANGIS, AMBYAR BARENG-BARENG!"</p> <!-- Slogan -->
+        <a href="#tiket" class="cta-btn">CEK KOLEKSI TIKET</a> <!-- CTA Button -->
+    </header>
+
+    <!-- 2. ABOUT THE BRAND -->
+    <section class="about">
+        <div class="about-text">
+            <h2>KITA KELUARGA FAMILIA</h2>
+            <p>NDX AKA bukan sekadar musik, ini adalah suara hati para pejuang rindu yang ambyar. Sejak 2011, kami menyatukan jutaan Familia dan Lady Fam melalui Hip-hop Dangdut yang murni. Konser Tour 2026 hadir dengan visual panggung megah yang akan membawa pengalaman menonton Anda ke dimensi baru.</p> <!-- Penjelasan Brand -->
+        </div>
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=800" alt="Konser NDX" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+        </div>
+    </section>
+
+    <!-- 3. PRODUCT/FEATURE GALLERY -->
+    <section class="gallery" id="tiket">
+        <h2>PILIH AREA AMBYARMU</h2>
+        <div class="ticket-grid">
+            <!-- Minimal 3-4 item unggulan beserta harganya -->
+            <div class="ticket-card">
+                <h3>FESTIVAL A</h3>
+                <span class="price">Rp 150.000</span>
+                <p>Area paling dekat panggung, siap moshpit bareng Yonanda & Fajar!</p>
+            </div>
+            <div class="ticket-card" style="border: 2px solid #ff0080;">
+                <h3>VIP FAMILIA</h3>
+                <span class="price">Rp 500.000</span>
+                <p>Akses Meet & Greet, area khusus, dan official merchandise eksklusif.</p>
+            </div>
+            <div class="ticket-card">
+                <h3>FESTIVAL B</h3>
+                <span class="price">Rp 100.000</span>
+                <p>Area luas, bebas joget tanpa batas bersama ribuan Familia lainnya.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>SUARA FAMILIA</h2>
+        <div class="testi-row">
+            <!-- Ulasan singkat dari pelanggan fiktif -->
+            <div class="testi-box">
+                <p>"Konser paling pecah! Visual panggungnya gila, NDX AKA emang gak pernah gagal bikin ambyar."</p>
+                <span>— @Siska_LadyFam</span>
+            </div>
+            <div class="testi-box">
+                <p>"VIP-nya worth it banget. Gak antri panjang dan view-nya langsung ke muka artis idola!"</p>
+                <span>— @Budi_Familia</span>
+            </div>
+            <div class="testi-box">
+                <p>"Sound system-nya nendang banget sampai ke dada. Pengalaman konser lokal rasa internasional!"</p>
+                <span>— @Dika_Jogja</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer>
+        <div class="footer-col">
+            <h4>KANTOR MANAGEMENT</h4> <!-- Alamat fiktif -->
+            <p>Jalan Imogiri Timur No. 123<br>Yogyakarta, Indonesia, 55191</p>
+        </div>
+        <div class="footer-col">
+            <h4>HUBUNGI KAMI</h4> <!-- Kontak person -->
+            <p>Email: official@ndxaka.com</p>
+            <p>WhatsApp: +62 812 3456 789</p>
+        </div>
+        <div class="footer-col">
+            <h4>FOLLOW THE ENERGY</h4> <!-- Link media sosial -->
+            <a href="#">Instagram @ndxakasquad</a>
+            <a href="#">YouTube NDX AKA TV</a>
+            <a href="#">TikTok Official NDX</a>
+        </div>
+    </footer>
+
+</body>
+</html>
